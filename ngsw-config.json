@@ -11,7 +11,8 @@
         "/*.js"
       ]
     }
-  }, {
+  }, 
+  {
     "name": "assets",
     "installMode": "lazy",
     "updateMode": "prefetch",
@@ -20,5 +21,18 @@
         "/assets/**"
       ]
     }
-  }]
+  }
+],
+  "dataGroups": [
+    {
+      "name": "some-api",
+      "urls": ["https://some-api"],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxSize": 20,
+        "maxAge": "1h",
+        "timeout": "5s"
+      }
+    }
+  ]
 }
